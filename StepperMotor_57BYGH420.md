@@ -26,3 +26,11 @@ https://zifmfmphantom.tistory.com/143
 스텝모터가 회전할때 코일에 걸리는 전압을 스위칭할 때 코일의 인덕턴스에 의해 흐르는 전류는 시상수만큼 지연된다. 전압을 높이면 시상수가 줄어들어 더 높은 속도로 회전할 수 있고 더 많은 토크와 출력을 낼수 있다. <br>
 하지만, 전압을 높이면 각 스텝마다 딱딱하게 회전하고 진동할 수 있다. <br>
 https://gammabeta.tistory.com/3372?category=177287
+
+## NEMA
+스텝모터에서 NEMA(National Electrical Manufacturers Association)를 말할 때는 보통 NEMA에서 표준화한 스텝모터 크기를 의미한다.<br>
+NEMA에서 스텝 모터를 크기를 표준화하여 NEMA 표준인 스텝모터는 제조사가 달라도 서로 교체하여 설치할 수 있다. 하지만, NEMA에서 표준화한 것은 기계적인 크기이기 때문에 전기적으로는 제조사마다 서로 다를 수 있다.<br>
+**57BYGH420은 NEMA23**<br>
+https://gammabeta.tistory.com/3349?category=177287
+
+
