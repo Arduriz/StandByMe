@@ -13,6 +13,8 @@ https://zifmfmphantom.tistory.com/143
 
 # etc.
 12V 2A의 전원을 L298n에 연결해야 잘 작동함, 5V는 부족 <br>
+코드에서 speedDelay가 10미만이면 불안정함 <br>
+Enable A, Enable B로 속도 제어하려하면 왜인지 모르겠는데 불안정함, Enable A, Enable B 안 쓸 때는 캡을 씌워야함 (왜인지는 까먹음) <br>
 
 ***
 # 참고
