@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/65582244/183921151-6d4354a8-290b-45e9-a31d-48215045ca20.png)
 
 # code
-https://github.com/Arduriz/StandByMe/blob/main/StepperMotor_withoutHeader.c <br>
+https://github.com/Arduriz/StandByMe/blob/main/StepperMotor_withoutHeader.ino <br>
 
 **ref.** <br>
 https://m.blog.naver.com/roboholic84/220851897579 <br>
