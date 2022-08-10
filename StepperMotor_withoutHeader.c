@@ -5,7 +5,7 @@ int IN4 = 7;
 int ENA = 9;   //EnableA를 아두이노와 연결했을 때, 변수 정의 때문에 활성화가 좋음
 int ENB = 10;  //EnableB를 아두이노와 연결했을 때, 변수 정의 때문에 활성화가 좋음
 
-int speedDelay = 3; //모터 속도를 위한 딜레이로 낮을 수록 빠름, 3이 최대인듯
+int speedDelay = 3; //모터 속도를 위한 딜레이로 낮을 수록 빠름, 3이 속도 최대인듯
 
 void setup(){
   pinMode(IN1,OUTPUT);
