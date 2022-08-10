@@ -11,8 +11,11 @@ https://buildbotics.com/wiring-stepper-motors/
 https://github.com/Arduriz/StandByMe/blob/main/StepperMotor_withoutHeader.c <br>
 
 **참고** <br>
-https://m.blog.naver.com/roboholic84/220851897579
+https://m.blog.naver.com/roboholic84/220851897579 <br>
 https://zifmfmphantom.tistory.com/143
+
+# 기타
+12V 2A의 전원을 L298n에 연결해야 잘 작동함, 5V는 부족 <br>
 
 ***
 # 참고
