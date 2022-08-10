@@ -15,7 +15,7 @@ https://zifmfmphantom.tistory.com/143
 12V 2A의 전원을 L298n에 연결해야 잘 작동함, 5V는 부족 <br>
 
 ***
-# 참고
+# ref.
 ## 6leads stepper motor 배선
 ![image](https://user-images.githubusercontent.com/65582244/183924109-a7f589ec-b4c3-4bcd-b7e8-5d62b3bcce29.png) <br>
 https://buildbotics.com/wiring-stepper-motors/
