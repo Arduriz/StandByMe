@@ -4,10 +4,6 @@
 ![image](https://user-images.githubusercontent.com/65582244/183921094-4b8ae34f-95df-4fc3-9bca-9469ec604e90.png)
 ![image](https://user-images.githubusercontent.com/65582244/183921151-6d4354a8-290b-45e9-a31d-48215045ca20.png)
 
-# 배선
-![image](https://user-images.githubusercontent.com/65582244/183924109-a7f589ec-b4c3-4bcd-b7e8-5d62b3bcce29.png) <br>
-https://buildbotics.com/wiring-stepper-motors/
-
 # code
 https://github.com/Arduriz/StandByMe/blob/main/StepperMotor_withoutHeader.c <br>
 
@@ -20,6 +16,10 @@ https://zifmfmphantom.tistory.com/143
 
 ***
 # 참고
+## 6leads stepper motor 배선
+![image](https://user-images.githubusercontent.com/65582244/183924109-a7f589ec-b4c3-4bcd-b7e8-5d62b3bcce29.png) <br>
+https://buildbotics.com/wiring-stepper-motors/
+
 ## 스텝 모터 정격 전압
 스텝모터의 정격전압은 일반 모터의 정격전압과 의미가 다르다. 스텝모터의 정격전압은 정격전류에서 코일 저항을 곱한 값이다. <br>
 일반적으로 스텝모터 구동전압은 정격전압의 10~24배를 사용한다. 정격전압보다 높은 전압을 사용할 때는 전류제한 회로를 사용하여 전류가 정격전류를 넘지 않도록 해야 한다. <br>
