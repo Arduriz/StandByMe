@@ -1,11 +1,11 @@
 # 리눅스 코드
 
->1.  sudo raspi-config 
-2.  Select Interfacing Options -> I2C ->yes Enable i2C Kernel Module
+> 1.  sudo raspi-config 
+> 2.  Select Interfacing Options -> I2C ->yes Enable i2C Kernel Module
 
->1.	sudo reboot
+> 1.	sudo reboot
 
->1. wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
+> 1. wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
 2. tar zxvf bcm2835-1.68.tar.gz 
 3. cd bcm2835-1.68/
 4. sudo ./configure && sudo make && sudo make check && sudo make install
