@@ -9,14 +9,14 @@
 > 2. tar zxvf bcm2835-1.68.tar.gz 
 > 3. cd bcm2835-1.68/
 > 4. sudo ./configure && sudo make && sudo make check && sudo make install
-> 5. # For more information, please refer to：http://www.airspayce.com/mikem/bcm2835/
+> 5. \# For more information, please refer to：http://www.airspayce.com/mikem/bcm2835/
 
 > 1. sudo apt-get install wiringpi
-> 2. # For Raspberry Pi system after may 2019, an upgrade is required.
+> 2. \# For Raspberry Pi system after may 2019, an upgrade is required.
 > 3. wget https://project-downloads.drogon.net/wiringpi-latest.deb
 > 4. sudo dpkg -i wiringpi-latest.deb
 > 5. gpio -v
-> 6. # run gpio -v version 2.52 will appear, if not, installtion error happens
+> 6. \# run gpio -v version 2.52 will appear, if not, installtion error happens
 
 > 1. sudo apt-get install p7zip-full
 > 2. wget http://www.waveshare.net/w/upload/9/96/Pan-Tilt_HAT_code.7z
@@ -29,8 +29,8 @@
 > 3. make
 > 4. sudo ./main
 
-> 1. #Execute the following actions under the directory Pan-Tilt-HAT/RaspberryPi/:
-> 2. #Execute this if using ambient light
+> 1. \#Execute the following actions under the directory Pan-Tilt-HAT/RaspberryPi/:
+> 2. \#Execute this if using ambient light
 > 3. cd Light_Sensor/
 > 4. #Execute this if using pan servo
 > 5. cd Servo_Driver
@@ -95,15 +95,15 @@
 > 1. sudo git clone https://github.com/waveshare/Pan-Tilt-HAT
 > 2. cd Pan-Tilt-HAT/JetsonNano/
 
-> 1. # Execute this if using ambient light 
+> 1. \# Execute this if using ambient light 
 > 2. cd 1_Light_Sensor/
-> 3. #Execute this if using pan servo
+> 3. \#Execute this if using pan servo
 > 4. cd 2_Servo_Driver/
 
-> 1. #python2
+> 1. \#python2
 > 2. cd python2
 > 3. sudo python main.py
-> 4. #python3
+> 4. \#python3
 > 5. cd python3
 > 6. sudo python3 main.py
 
