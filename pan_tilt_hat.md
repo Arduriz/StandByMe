@@ -1,4 +1,4 @@
-# 리눅스 코드
+# Pan, Tilt, Hat Linux code
 
 > 1.  sudo raspi-config 
 > 2.  Select Interfacing Options -> I2C ->yes Enable i2C Kernel Module
