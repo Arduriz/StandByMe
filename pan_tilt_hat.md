@@ -1,113 +1,105 @@
 # Pan, Tilt, Hat Linux code
 
-> 1.  sudo raspi-config 
-> 2.  Select Interfacing Options -> I2C ->yes Enable i2C Kernel Module
+\#라즈베리파이 설정창에 들어가 i2c허용
+sudo raspi-config
+interfacing options에서 i2c 옵션 허용
 
-> 1.	sudo reboot
+\#i2c허용 후 리부트시켜 설정 적용
+sudo reboot
 
-> 1. wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
-> 2. tar zxvf bcm2835-1.68.tar.gz 
-> 3. cd bcm2835-1.68/
-> 4. sudo ./configure && sudo make && sudo make check && sudo make install
-> 5. \# For more information, please refer to：http://www.airspayce.com/mikem/bcm2835/
+\#해당링크에서 bcm2835 다운로드
+wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
+tar zxvf bcm2835
+cd bcm2835
 
-> 1. sudo apt-get install wiringpi
-> 2. \# For Raspberry Pi system after may 2019, an upgrade is required.
-> 3. wget https://project-downloads.drogon.net/wiringpi-latest.deb
-> 4. sudo dpkg -i wiringpi-latest.deb
-> 5. gpio -v
-> 6. \# run gpio -v version 2.52 will appear, if not, installtion error happens
+sudo ./configure && sudo make && sudo make check && sudo make install
+\#wiring pi 다운로드
+sudo apt-get install wiringpi
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+gpio -v
 
-> 1. sudo apt-get install p7zip-full
-> 2. wget http://www.waveshare.net/w/upload/9/96/Pan-Tilt_HAT_code.7z
-> 3. 7z x Pan-Tilt_HAT_code.7z -r -o./Pan-Tilt_HAT_code
-> 4. sudo chmod 777 -R  Pan-Tilt_HAT_code
-> 5. cd Pan-Tilt_HAT_code/RaspberryPi/
+\# run gpio -v version 2.52 will appear, if not, installtion error happens
+sudo apt-get install p7zip-full
+wget http://www.waveshare.net/w/upload/9/96/Pan-Tilt_HAT_code.7z
+7z x Pan-Tilt_HAT_code.7z -r -o./Pan-Tilt_HAT_code
+sudo chmod 777 -R Pan-Tilt_HAT_code
 
-> 1. cd test
-> 2. make clean
-> 3. make
-> 4. sudo ./main
+\#폴더 PanTilt 속 Pi로 접근하여 test파일 실행
+cd PanTilt/Pi/
+sudo python3 main.py
 
-> 1. \#Execute the following actions under the directory Pan-Tilt-HAT/RaspberryPi/:
-> 2. \#Execute this if using ambient light
-> 3. cd Light_Sensor/
-> 4. #Execute this if using pan servo
-> 5. cd Servo_Driver
+\#1-Light sensor 예제 실행
+cd Light_Sensor/
+sudo python3 mainLS.py
 
-> 1. cd bcm2835
-> 2. make clean
-> 3. make
-> 4. sudo ./main
+\#2-Servo Driver 예제 실행
+cd Servo_Driver
+cd bcm2835
+sudo python3 mainSD.py
 
-> 1. cd wiringpi
-> 2. make clean
-> 3. make
-> 4. sudo ./main
+\#3-Module Execute 예제 실행
+cd moduleexecute
+sudo ./main
 
-> 1. cd python
-> 2. sudo python main.py
+\#전 폴더 접근
+cd ../
 
-> 1. sudo raspi-config
-> 2. Select Enable Camera, select YES
+\#python 코드
+cd python
+sudo python main.py
 
-> 1.	sudo nano /etc/modules
-> 2.	
-> 1.	bcm2835-v4l2
-> 2.
+\# camera 접근 권한 설정
+sudo raspi-config
+bcm2835-v4l2
 
-> 1. sudo reboot
-> 2. ls /dev/video*
+sudo reboot
+ls /dev/video*
+sudo apt-get update
+sudo apt-get install libjpeg8-dev cmake
+cd PanTilt/Pi/web_Python
+git clone https://github.com/ksonliam/mjpg-streamer
+cd mjpg-streamer/mjpg-streamer-experimental/
+sudo make clean all
+sudo ./start.sh
+sudo apt-get install python-bottle
+cd PanTilt/Pi/web_Python/
+sudo python main.py
+sudo apt-get update
 
-> 1. sudo apt-get update
-> 2. sudo apt-get install libjpeg8-dev cmake
-> 3. cd Pan-Tilt-HAT/RaspberryPi/web_Python
-> 4. git clone https://github.com/jacksonliam/mjpg-streamer
-> 5. cd mjpg-streamer/mjpg-streamer-experimental/
-> 6. sudo make clean all
-> 7. sudo ./start.sh
+\#python3 버전 설치
+sudo apt-get install python3-pip
 
-> 1. sudo apt-get install python-bottle
-> 2. cd Pan-Tilt-HAT/RaspberryPi/web_Python/
-> 3. sudo python main.py
-> 1. sudo apt-get update
-> 2. sudo apt-get install python3-pip
-> 3. sudo pip3 install Jetson.GPIO
-> 4. sudo groupadd -f -r gpio
-> 5. sudo usermod -a -G gpio your_user_name
-> 6. sudo cp /opt/nvidia/jetson-gpio/etc/99-gpio.rules /etc/udev/rules.d/
-> 7. sudo udevadm control --reload-rules && sudo udevadm trigger
+\#Jetson 설치
+sudo pip3 install Jetson.GPIO
+sudo groupadd -f -r gpio
+sudo usermod -a -G gpio your_user_name
+sudo cp /opt/nvidia/jetson-gpio/etc/99-gpio.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules && sudo udevadm trigger
 
-> 1.	sudo apt-get install python-smbus
+\#smbus i2c 설치
+sudo apt-get install python-smbus
+sudo apt-get install python3-pil
+sudo apt-get install python3-numpy
+sudo apt-get install p7zip
+wget http://www.waveshare.net/w/upload/9/96/Pan-Tilt_HAT_code.7z
+7zr x Pan-Tilt_HAT_code.7z -r -o./Pan-Tilt_HAT_code
+sudo chmod 777 -R Pan-Tilt_HAT_code
+cd PanTilt/HAT_Code/Pan-Tilt-HAT/
+sudo git clone https://github.com/waveshare/Pan-Tilt-HAT
+cd PanTilt/JetsonNano/
+sudo git clone https://github.com/waveshare/Pan-Tilt-HAT
+cd PanTilt/JetsonNano/
+cd 1_Light_Sensor/
 
-> 1. sudo apt-get install python3-pil
-> 2. sudo apt-get install python3-numpy
+\#pan servo 작동
+cd 2_Servo_Driver/
+sudo python main.py
+cd python3
+sudo python3 main.py
+DISPLAY=:0.0 gst-launch-1.0 nvarguscamerasrc ! 'video/x-raw(memory:NVMM), width=1920, height=1080, format=(string)NV12, framerate=(fraction)30/1' ! nvoverlaysink –e
 
-> 1. sudo apt-get install p7zip
-> 2. wget http://www.waveshare.net/w/upload/9/96/Pan-Tilt_HAT_code.7z
-> 3. 7zr x Pan-Tilt_HAT_code.7z -r -o./Pan-Tilt_HAT_code
-> 4. sudo chmod 777 -R  Pan-Tilt_HAT_code
-> 5. cd Pan-Tilt/HAT_Code/Pan-Tilt-HAT/
+\#pan tilt main.py 코드 실행
+cd 3_Pan-Tilt/
+sudo python main.py
 
-> 1. sudo git clone https://github.com/waveshare/Pan-Tilt-HAT
-> 2. cd Pan-Tilt-HAT/JetsonNano/
-
-> 1. sudo git clone https://github.com/waveshare/Pan-Tilt-HAT
-> 2. cd Pan-Tilt-HAT/JetsonNano/
-
-> 1. \# Execute this if using ambient light 
-> 2. cd 1_Light_Sensor/
-> 3. \#Execute this if using pan servo
-> 4. cd 2_Servo_Driver/
-
-> 1. \#python2
-> 2. cd python2
-> 3. sudo python main.py
-> 4. \#python3
-> 5. cd python3
-> 6. sudo python3 main.py
-
-> 1.	DISPLAY=:0.0 gst-launch-1.0 nvarguscamerasrc ! \'video/x-raw(memory:NVMM), width=1920, height=1080, format=(string)NV12, framerate=(fraction)30/1\' ! nvoverlaysink –e
-
-> 1. cd 3_Pan-Tilt+CAM
-> 2. sudo python main.py
